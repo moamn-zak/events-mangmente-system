@@ -75,7 +75,7 @@ app.use((error, req, res, next) =>
     res.status(status).json({ message: message });
 });
 
-mongoose.connect('mongodb+srv://moamn:moamn@cluster0.ojvgbto.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('')
     .then(result =>
     {
         app.listen(8080);
