@@ -1,0 +1,1597 @@
+{
+	"info": {
+		"_postman_id": "3865916e-3551-4412-ba3a-51454b7bcc13",
+		"name": "EventPro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29452937"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "http://localhost:8080/client/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@ev2.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "moamn",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "alqadm",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0991366385",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/MOAMN/Wallmax/Wallmax-6274.jpg"
+								},
+								{
+									"key": "accountNum",
+									"value": "egwegw43t34fe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/booking",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2Mi5jb20iLCJ1c2VySWQiOiI2NTIxZTAxNGFlMmNkOTU1MTc3MzE2N2YiLCJ0eXBlIjoiY2xpZW50IiwiaWF0IjoxNjk2ODUzNjk2LCJleHAiOjE2OTk0NDU2OTZ9.vPY15N274uOqbJu4sBrMX2v6I_vvM2sig4VFzlu2TZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "650edc03c9fa4c5a74d83c99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/searchEvent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "damascus",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "moamn zak",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-03-05",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/searchEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"searchEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/edit_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2Mi5jb20iLCJ1c2VySWQiOiI2NTIxZTAxNGFlMmNkOTU1MTc3MzE2N2YiLCJ0eXBlIjoiY2xpZW50IiwiaWF0IjoxNjk2NzE4OTA5LCJleHAiOjE2OTkzMTA5MDl9._m-zA5yUEdE1YPAZWPtoHTgREkoOnp97WveAXP_raOE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@ev2.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "moamn zak",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "alqadm cc",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0991366385",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "accountNum",
+									"value": "egesgw4343",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/edit_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"edit_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/add_comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2LmNvbSIsInVzZXJJZCI6IjY1MDljMTE3MzAzMmNjNjE2MDdmZmY5ZSIsIm5hbWUiOiJtb2FtbiIsImlhdCI6MTY5NTEzODc5OSwiZXhwIjoxNjk3NzMwNzk5fQ.IOVbp2NwIfcg1VMkibFQsX1GRUsp3zysey5n5X104l0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "6510596f74220a37733be283",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "3 comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/add_comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"add_comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/acceptedevents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/client/acceptedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"acceptedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/finishedevents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2Mi5jb20iLCJ1c2VySWQiOiI2NTIxZTAxNGFlMmNkOTU1MTc3MzE2N2YiLCJ0eXBlIjoiY2xpZW50IiwiaWF0IjoxNjk2ODUzNjk2LCJleHAiOjE2OTk0NDU2OTZ9.vPY15N274uOqbJu4sBrMX2v6I_vvM2sig4VFzlu2TZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/client/finishedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"finishedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/bookedevents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2LmNvbSIsInVzZXJJZCI6IjY1MDljMTE3MzAzMmNjNjE2MDdmZmY5ZSIsIm5hbWUiOiJtb2FtbiIsImlhdCI6MTY5NTEzODEyMywiZXhwIjoxNjk3NzMwMTIzfQ.TS6p0gu-Md0_9YB6zh6dI8TeMhd_UTArenwI9MkFfpI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/client/bookedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"bookedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/get_profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2Mi5jb20iLCJ1c2VySWQiOiI2NTIxZTAxNGFlMmNkOTU1MTc3MzE2N2YiLCJ0eXBlIjoiY2xpZW50IiwiaWF0IjoxNjk2ODUzNjk2LCJleHAiOjE2OTk0NDU2OTZ9.vPY15N274uOqbJu4sBrMX2v6I_vvM2sig4VFzlu2TZw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/client/get_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"get_profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "owner",
+			"item": [
+				{
+					"name": "http://localhost:8080/owner/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@owev1.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "moamn zak1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "damascuse",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0991366358",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/owner/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/creatEvent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYxLmNvbSIsInVzZXJJZCI6IjY1MGVjYjdiNWU2Y2MwNjRmMDFkNmQ1NCIsInVzZXJuYW1lIjoibW9hbW4gemFrMSIsInR5cGUiOiJvd25lciIsImlhdCI6MTY5NjIzODI3NCwiZXhwIjoxNjk4ODMwMjc0fQ.qpzsKBNNISs5LrQuFB-IzYAEDVl0f7HyUSmHB9Ts63Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "trssssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "tryyyyy ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/MOAMN/Wallmax/OMEN Dark.png"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sana",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "damascus",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-09-24",
+									"type": "text"
+								},
+								{
+									"key": "times",
+									"value": "08:30",
+									"type": "text"
+								},
+								{
+									"key": "timee",
+									"value": "10:30",
+									"type": "text"
+								},
+								{
+									"key": "pplNum",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/owner/creatEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"creatEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/updateEvent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "650edc03c9fa4c5a74d83c99",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "1 updateesssssssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "updated contentss",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/MOAMN/Wallmax/Midnight Embers.png"
+								},
+								{
+									"key": "price",
+									"value": "450",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sana updatesss",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "damascuse",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-09-24",
+									"type": "text"
+								},
+								{
+									"key": "times",
+									"value": "08:30",
+									"type": "text"
+								},
+								{
+									"key": "timee",
+									"value": "10:30",
+									"type": "text"
+								},
+								{
+									"key": "pplNum",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "accountNum",
+									"value": "egesgw4343",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "accepted",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/owner/updateEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"updateEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/edit_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@ev.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "moamn zak",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "alqadm cc",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0991366385",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/owner/edit_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"edit_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/acceptedevents",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/owner/acceptedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"acceptedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/pendingevents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/owner/pendingevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"pendingevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/finishedevents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJ0eXBlIjoib3duZXIiLCJpYXQiOjE2OTYxNjg5OTksImV4cCI6MTY5ODc2MDk5OX0.9DZwyMZVNH-AbFq0vYfRF2Dsxd0UOoUOqDRQlC-4br4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/owner/finishedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"finishedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/cancelledevents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/owner/cancelledevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"cancelledevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/get_profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQG93ZXYuY29tIiwidXNlcklkIjoiNjUwZWI4MTJlZmEyZjU4Mjk2NzU1M2U1IiwidXNlcm5hbWUiOiJtb2FtbiB6YWsiLCJpYXQiOjE2OTU0NzEyNjYsImV4cCI6MTY5ODA2MzI2Nn0.Adpn00jt4thmNYaRx9_Jt0yPIoEHB71eR3XoCPr8ofI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/owner/get_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"get_profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "event",
+			"item": [
+				{
+					"name": "http://localhost:8080/event/booking Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vYW1uQGV2LmNvbSIsInVzZXJJZCI6IjY1MDljMTE3MzAzMmNjNjE2MDdmZmY5ZSIsIm5hbWUiOiJtb2FtbiIsImlhdCI6MTY5NTEzODc5OSwiZXhwIjoxNjk3NzMwNzk5fQ.IOVbp2NwIfcg1VMkibFQsX1GRUsp3zysey5n5X104l0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "6509c22e84b585c3da982610",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/event/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@ev2.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/event/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/event/events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/event/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/event/getsinglPost/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/event/getsinglPost/6510596f74220a37733be283",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"getsinglPost",
+								"6510596f74220a37733be283"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "http://localhost:8080/admin/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ergegegrd",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/addAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"addAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "adminmoamn@event.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/add_city",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWlubW9hbW5AZXZlbnQuY29tIiwidXNlcklkIjoiNjUwOWNkZmFlYzZlNmY5ZmY1NmIwMzg3IiwibmFtZSI6Im1vYW1uIiwiaWF0IjoxNjk1MTQxNTA4LCJleHAiOjE2OTc3MzM1MDh9.-4PYl9WEp7I3iTypfpop3OeWxpCgoZc-wr6RFqN8Xtw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "damascus",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/add_city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"add_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/accept_cancel_event",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWlubW9hbW5AZXZlbnQuY29tIiwidXNlcklkIjoiNjUwOWNkZmFlYzZlNmY5ZmY1NmIwMzg3IiwibmFtZSI6Im1vYW1uIiwiaWF0IjoxNjk1MTQxNTA4LCJleHAiOjE2OTc3MzM1MDh9.-4PYl9WEp7I3iTypfpop3OeWxpCgoZc-wr6RFqN8Xtw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "650ecb7b5e6cc064f01d6d54",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "accepted",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/accept_cancel_event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"accept_cancel_event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/activate_owner_account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWlubW9hbW5AZXZlbnQuY29tIiwidXNlcklkIjoiNjUwOWNkZmFlYzZlNmY5ZmY1NmIwMzg3IiwibmFtZSI6Im1vYW1uIiwiaWF0IjoxNjk1MTQzNDU4LCJleHAiOjE2OTc3MzU0NTh9.UMOeTn-Ea653IzZouQAqRSYIy5XMJ79XtwozkHCyNdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ownerId",
+									"value": "650ecb7b5e6cc064f01d6d54",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "activited",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/activate_owner_account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"activate_owner_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/delete_city",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWlubW9hbW5AZXZlbnQuY29tIiwidXNlcklkIjoiNjUwOWNkZmFlYzZlNmY5ZmY1NmIwMzg3IiwibmFtZSI6Im1vYW1uIiwiaWF0IjoxNjk1MTQxNTA4LCJleHAiOjE2OTc3MzM1MDh9.-4PYl9WEp7I3iTypfpop3OeWxpCgoZc-wr6RFqN8Xtw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cityId",
+									"value": "650adcd7064cda12acd1565f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/delete_city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"delete_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/acceptedevents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/acceptedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"acceptedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/pendingevents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/pendingevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"pendingevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/finishedevents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/finishedevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"finishedevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/cancelledevents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/cancelledevents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"cancelledevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/get_inactive_owner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/get_inactive_owner/activited",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"get_inactive_owner",
+								"activited"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/admin/get_city",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/get_city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"get_city"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bank",
+			"item": [
+				{
+					"name": "http://localhost:8081/bank/getBalance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/bank/getBalance/652180d90de42306e042ffd5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bank",
+								"getBalance",
+								"652180d90de42306e042ffd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/bank/createBankAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"accountHolder\": \"moamnzak\",\r\n    \"balance\": 9999999999\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bank/createBankAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bank",
+								"createBankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/bank/pay",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderAccNum\": \"sabcza008278713\",\r\n    \"receiverAccNum\": \"sabcza8002208\",\r\n    \"amount\": 500\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bank/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bank",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/bank/getAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/bank/getAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bank",
+								"getAccounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "old",
+			"item": [
+				{
+					"name": "http://localhost:8080/client/search_by_owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "moamn zak",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/search_by_owner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"search_by_owner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/search_by_city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "damascus",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/search_by_city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"search_by_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/search_by_date",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2023-03-05",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/search_by_date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"search_by_date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/get_comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "6510596f74220a37733be283",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/get_comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"get_comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/client/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@ev1.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/owner/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moamn@owev.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moamn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/owner/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"owner",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

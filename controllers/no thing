@@ -1,0 +1,906 @@
+// const c = Client.findOne({ email: email });
+// const o = Owner.findOne({ email: email });
+
+// Client.findOne({ email: email })
+//     .then(client =>
+//     {
+//         if (client)
+//         {
+//             type = 'client'
+//             loadedUser = client;
+//             return bcrypt.compare(password, client.password)
+//                 .then(isEqule =>
+//                 {
+//                     if (!isEqule)
+//                     {
+//                         const error = new Error('Wronge password!');
+//                         error.statusCode = 401;
+//                         throw error;
+//                     }
+//                     const token = jwt.sign({
+//                         email: loadedUser.email,
+//                         userId: loadedUser._id.toString(),
+//                         username: loadedUser.username
+//                     }, 'hi', { expiresIn: '30d' })
+//                     res.status(200)
+//                         .json({ message: 'loged in', token: token, type: type, user: loadedUser })
+//                 })
+//         }
+//         return Owner.findOne({ email: email })
+//     })
+//     .then(owner =>
+//     {
+//         if (owner)
+//         {
+//             type = 'owner'
+//             loadedUser = owner;
+//             return bcrypt.compare(password, owner.password)
+//                 .then(isEqule =>
+//                 {
+//                     if (!isEqule)
+//                     {
+//                         const error = new Error('Wronge password!');
+//                         error.statusCode = 401;
+//                         throw error;
+//                     }
+//                     const token = jwt.sign({
+//                         email: loadedUser.email,
+//                         userId: loadedUser._id.toString(),
+//                         username: loadedUser.username
+//                     }, 'hi', { expiresIn: '30d' })
+//                     res.status(200)
+//                         .json({ message: 'loged in', token: token, type: type, user: loadedUser })
+//                 })
+//         }
+//         const error = new Error('Wronge csscscs!');
+//         error.statusCode = 401;
+//         throw error;
+//     })
+
+
+
+
+
+// exports.getfinishedEvents = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     Event.find({ status: 'accepted' }).then(events =>
+//     {
+//         events.forEach((event) =>
+//         {
+//             if (event.date < new Date())
+//             {
+//                 event.status = 'finished';
+//                 event.save();
+//             }
+
+//         });
+
+//     })
+
+//     const currentPage = req.query.page || 1;
+//     const perPage = 2;
+//     let totalItems;
+//     Event.find().countDocuments()
+//         .then(count =>
+//         {
+//             totalItems = count;
+//             if (req.userId)
+//             {
+//                 return Event.find({ status: 'finished', creator: req.userId })
+//             } else
+//             {
+//                 return Event.find({ status: 'finished' })
+//             }
+//             // .skip((currentPage - 1) * perPage)
+//             // .limit(perPage);
+//         })
+//         .then(events =>
+//         {
+
+//             res
+//                 .status(200)
+//                 .json({ message: 'Fetched events successfully.', events: events });//totalItems: totalItems
+
+//         }).catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+// const setFinishEvent = events =>
+// {
+//     Event.find({ status: 'accepted' }).then(event =>
+//     {
+//         forEach(event =>
+//         {
+//             if (event.date == new Date())
+//             {
+//                 event.status = 'finished';
+//                 event.save();
+//             }
+
+//         });
+
+//     })
+
+// };
+
+
+
+
+
+// exports.getfinishedEvents = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     // const currentDate = new Date();
+//     Event.find({ status: 'accepted' })
+//         .then(events =>
+//         {
+//             events.forEach((event) =>
+//             {
+//                 const timeComponents = event.timee.split(':');
+//                 const hours = parseInt(timeComponents[0], 10);
+//                 const minutes = parseInt(timeComponents[1], 10);
+//                 const newDate = new Date(event.date);
+//                 newDate.setHours(hours);
+//                 newDate.setMinutes(minutes);
+//                 console.log(newDate);
+
+//                 if (newDate < new Date())
+//                 {
+//                     event.status = 'finished';
+//                     event.save();
+//                 }
+//             });
+//             if (req.type == 'owner')
+//             {
+//                 return Event.find({ status: 'finished', creator: req.userId })
+//             } if (req.type == 'client')
+//             {
+//                 return Event.find({ status: 'finished', clients: req.userId })
+//             } else
+//             {
+//                 return Event.find({ status: 'finished' })
+//             }
+//         })
+//         .then(events =>
+//         {
+//             res
+//                 .status(200)
+//                 .json({ message: 'Fetched events successfully.', events: events });
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+
+
+
+// exports.getfinishedEvents = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+
+//     Event.find({ status: 'accepted' })
+//         .populate('creator') // Populate the 'creator' field with the 'Owner' document
+//         .then(events =>
+//         {
+//             const updates = events.map(event =>
+//             {
+//                 const timeComponents = event.timee.split(':');
+//                 const hours = parseInt(timeComponents[0], 10);
+//                 const minutes = parseInt(timeComponents[1], 10);
+//                 const newDate = new Date(event.date);
+//                 newDate.setHours(hours);
+//                 newDate.setMinutes(minutes);
+
+//                 if (newDate < new Date())
+//                 {
+//                     return Event.updateOne({ _id: event._id }, { status: 'finished' });
+//                 }
+//             });
+
+//             return Promise.all(updates)
+//                 .then(() =>
+//                 {
+//                     if (req.type === 'owner')
+//                     {
+//                         return Event.find({ status: 'finished', creator: req.userId }).populate('creator', 'username');
+//                     } else if (req.type === 'client')
+//                     {
+//                         return Event.find({ status: 'finished', clients: req.userId }).populate('creator', 'username');
+//                     } else
+//                     {
+//                         return Event.find({ status: 'finished' }).populate('creator', 'username');
+//                     }
+//                 });
+//         })
+//         .then(events =>
+//         {
+//             res.status(200).json({ message: 'Fetched events successfully.', events: events });
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+
+
+// exports.getfinishedEvents = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+
+//     Event.find({ status: 'accepted' })
+//         .then(events =>
+//         {
+//             events.forEach((event) =>
+//             {
+//                 const timeComponents = event.timee.split(':');
+//                 const hours = parseInt(timeComponents[0], 10);
+//                 const minutes = parseInt(timeComponents[1], 10);
+//                 const newDate = new Date(event.date);
+//                 newDate.setHours(hours);
+//                 newDate.setMinutes(minutes);
+
+//                 if (newDate < new Date())
+//                 {
+//                     event.status = 'finished';
+//                     event.save();
+//                 }
+//             });
+
+//             if (req.type == 'owner')
+//             {
+//                 return Event.find({ status: 'finished', creator: req.userId })
+//                     .populate('creator', 'username'); // Populate the 'creator' field again
+//             } else if (req.type == 'client')
+//             {
+//                 return Event.find({ status: 'finished', clients: req.userId })
+//                     .populate('creator', 'username'); // Populate the 'creator' field again
+//             } else
+//             {
+//                 return Event.find({ status: 'finished' })
+//                     .populate('creator', 'username');// Populate the 'creator' field again
+//             }
+//         })
+//         .then(events =>
+//         {
+//             res.status(200).json({ message: 'Fetched events successfully.', events: events });
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+
+
+// exports.login = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed, entered data is incorrect.');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+
+//     const email = req.body.email;
+//     const password = req.body.password;
+//     let loadedUser;
+
+//     Client.findOne({ email: email })
+//         .then(client =>
+//         {
+//             if (!client)
+//             {
+//                 const error = new Error('A user with this Email could not be found');
+//                 error.statusCode = 401;
+//                 throw error;
+//             }
+//             // console.log(client);
+//             loadedUser = client;
+//             return bcrypt.compare(password, client.password);
+
+
+//         }).then(isEqule =>
+//         {
+
+//             if (!isEqule)
+//             {
+//                 const error = new Error('Wronge password!');
+//                 error.statusCode = 401;
+//                 throw error;
+//             }
+
+//             const token = jwt.sign({
+//                 email: loadedUser.email,
+//                 userId: loadedUser._id.toString(),
+//                 name: loadedUser.name
+//             }, 'hi', { expiresIn: '30d' })//, { expiresIn: '30d' }
+//             res.status(200).json({ message: 'loged in', token: token, type: 'client', user: loadedUser })
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+
+// };
+
+
+// Owner.findOne({ email: email })
+//     .then(owner =>
+//     {
+//         if (!owner)
+//         {
+//             const error = new Error('A user with this Email could not be found');
+//             error.statusCode = 401;
+//             throw error;
+//         }
+//         // console.log(owner);
+//         type = 'owner'
+//         loadedUser = owner;
+//         return bcrypt.compare(password, owner.password);
+//     }).then(isEqule =>
+//     {
+//         if (!isEqule)
+//         {
+//             const error = new Error('Wronge password!');
+//             error.statusCode = 401;
+//             throw error;
+//         }
+
+//         const token = jwt.sign({
+//             email: loadedUser.email,
+//             userId: loadedUser._id.toString(),
+//             username: loadedUser.username
+//         }, 'hi', { expiresIn: '30d' })
+//         res.status(200)
+//             .json({ message: 'loged in', token: token, type: type, user: loadedUser })
+//     })
+//     .catch(err =>
+//     {
+//         if (!err.statusCode)
+//         {
+//             err.statusCode = 500;
+//         }
+//         next(err);
+//     });
+
+// exports.get_comments = (req, res, next) =>
+// {
+//     let loadedclient;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Entered data is incorrect...');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     const eventId = req.body.eventId;//const eventId = req.params.eventId;
+
+//     Event.findById(eventId).then(event =>
+//     {
+//         if (!event)
+//         {
+//             const error = new Error('Could not find event.');
+//             error.statusCode = 404;
+//             throw error;
+//         }
+//         // console.log(event.comments);
+
+//         return Comment.find({ _id: event.comments });
+//     }).then(comment =>
+//     {
+
+//         console.log(comment);
+//         return Comment.find({ content: comment.content });
+//         // return Comment.find({ content: comment.content });
+//         // console.log(comment.content);
+//     }).then(result =>
+//     {
+//         console.log(result);
+//         loadedclient = result;
+//         res.status(200).json({ message: '.....', comments: result, client: loadedclient });
+//     })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+
+
+
+
+
+// exports.booking = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+
+//     //    const clientId = req.params.clientId;
+//     const clientId = req.userId;
+//     const eventId = req.body.eventId;
+
+
+
+
+//     Client.findById(clientId)
+//         .then(client =>
+//         {
+//             if (!client)
+//             {
+//                 const error = new Error('Could not find client.');
+//                 error.statusCode = 404;
+//                 throw error;
+//             }
+//             return Event.findById(eventId)
+//                 .then(event =>
+//                 {
+//                     if (!event)
+//                     {
+//                         const error = new Error('Could not find event.');
+//                         error.statusCode = 404;
+//                         throw error;
+//                     }
+//                     if (client.wallet < event.price)
+//                     {
+//                         const error = new Error('you are poor.');
+//                         error.statusCode = 500;
+//                         throw error;
+//                     } if (event.pplCount >= event.pplNum)
+//                     {
+//                         const error = new Error('event full.');
+//                         error.statusCode = 500;
+//                         throw error;
+//                     }
+
+//                     event.pplCount = event.pplCount + 1;
+//                     client.wallet = client.wallet - event.price;
+//                     event.clients.push(client);
+//                     event.save();
+//                     client.events.push(event);
+//                     client.save();
+//                     return Owner.findById(event.creator)
+//                         .then(owner =>
+//                         {
+//                             if (!owner)
+//                             {
+//                                 const error = new Error('Could not find creator.');
+//                                 error.statusCode = 404;
+//                                 throw error;
+//                             }
+//                             owner.wallet = owner.wallet + event.price;
+//                             return owner.save()
+
+//                                 .then(result =>
+//                                 {
+//                                     console.log(result);
+//                                     res.status(201).json({
+//                                         message: 'Event booked successfully!',
+//                                         client: client,
+//                                         event: event,
+//                                         owner: owner.wallet
+//                                     });
+//                                 })
+//                         })
+//                 })
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+
+// };
+
+
+
+
+
+// exports.getsinglPost = (req, res, next) =>
+// {
+
+//     const eventId = req.params.eventId;//const eventId = req.body.eventId
+//     Event.findById(eventId).populate('creator', ['username', 'imageUrl'])
+//         .populate({
+//             path: 'comments',
+//             model: 'Comment',
+//             select: 'content',
+//             populate: {
+//                 path: 'client',
+//                 model: 'Client',
+//                 select: ['name', 'imageUrl']
+
+
+//             },
+//         })
+//         .then(event =>
+//         {
+//             if (!event)
+//             {
+//                 const err = new Error('event not found');
+//                 err.statusCode = 404;
+//                 throw err;
+//             }
+
+
+//             res.status(200).json({ message: 'client fatched.', event: event });
+
+//         }).catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+
+// };
+
+
+
+
+
+// exports.singlPost = async (req, res, next) =>
+// {
+//     try
+//     {
+//         const eventId = req.params.eventId;//const eventId = req.body.eventId
+//         const event = await Event.findById(eventId)
+//         if (!event)
+//         {
+//             const err = new Error('event not found');
+//             err.statusCode = 404;
+//             throw err;
+//         }
+//         event.populate('creator', ['username', 'imageUrl'])
+//             .populate({
+//                 path: 'comments',
+//                 model: 'Comment',
+//                 select: 'content',
+//                 populate: {
+//                     path: 'client',
+//                     model: 'Client',
+//                     select: ['name', 'imageUrl']
+//                 },
+//             });
+//         res.status(200).json({ message: 'client fatched.', event: event });
+
+
+//     }
+//     catch (err)
+//     {
+//         if (!err.statusCode)
+//         {
+//             err.statusCode = 500;
+//         }
+//         next(err);
+//     }
+// };
+
+
+
+// exports.login = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed, entered data is incorrect.');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+
+//     const email = req.body.email;
+//     const password = req.body.password;
+//     let loadedUser;
+//     let type;
+
+
+//     Client.findOne({ email: email })
+//         .then(client =>
+//         {
+//             if (client)
+//             {
+//                 type = 'client'
+//                 loadedUser = client;
+//                 return bcrypt.compare(password, client.password)
+//                     .then(isEqule =>
+//                     {
+//                         if (!isEqule)
+//                         {
+//                             const error = new Error('Wronge password!');
+//                             error.statusCode = 401;
+//                             throw error;
+//                         }
+//                         const token = jwt.sign({
+//                             email: loadedUser.email,
+//                             userId: loadedUser._id.toString(),
+//                             username: loadedUser.username,
+//                             type: type
+//                         }, 'hi', { expiresIn: '30d' })
+//                         res.status(200)
+//                             .json({ message: 'loged in', token: token, type: type, user: loadedUser })
+//                     })
+//             }
+//             return Owner.findOne({ email: email })
+//                 .then(owner =>
+//                 {
+//                     if (owner)
+//                     {
+//                         type = 'owner'
+//                         loadedUser = owner;
+//                         return bcrypt.compare(password, owner.password)
+//                             .then(isEqule =>
+//                             {
+//                                 if (!isEqule)
+//                                 {
+//                                     const error = new Error('Wronge password!');
+//                                     error.statusCode = 401;
+//                                     throw error;
+//                                 }
+//                                 const token = jwt.sign({
+//                                     email: loadedUser.email,
+//                                     userId: loadedUser._id.toString(),
+//                                     username: loadedUser.username,
+//                                     type: type
+//                                 }, 'hi', { expiresIn: '30d' })
+//                                 res.status(200)
+//                                     .json({ message: 'loged in', token: token, type: type, user: loadedUser })
+//                             })
+//                     }
+//                     const error = new Error('this Email not found');
+//                     error.statusCode = 401;
+//                     throw error;
+//                 })
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+
+
+// };
+
+
+
+
+
+
+
+
+
+// انشاء تابع و استخدامه
+// const bookEvent = async (clientId, eventId) =>
+// {
+//     const release = await ticketMutex.acquire();
+
+//     try
+//     {
+//         const client = await Client.findById(clientId);
+//         if (!client)
+//         {
+//             throw new Error('Could not find client.');
+//         }
+
+//         const event = await Event.findById(eventId);
+//         if (!event)
+//         {
+//             throw new Error('Could not find event.');
+//         }
+
+//         const owner = await Owner.findById(event.creator);
+//         if (!owner)
+//         {
+//             throw new Error('Could not find owner.');
+//         }
+
+//         if (event.pplCount >= event.pplNum)
+//         {
+//             throw new Error('Event is full.');
+//         }
+
+//         const paymentResponse = await axios.post(url + '/pay', {
+//             senderAccNum: client.accountNum,
+//             receiverAccNum: owner.accountNum,
+//             amount: event.price,
+//         });
+
+//         if (paymentResponse.status !== 200)
+//         {
+//             const errorMessage = paymentResponse.data.message;
+//             throw new Error(errorMessage);
+//         }
+
+//         event.pplCount++;
+//         event.clients.push(client);
+//         client.events.push(event);
+
+//         await Promise.all([event.save(), client.save()]);
+
+//         release();
+//         return event;
+//     } finally
+//     {
+//         release();
+//     }
+// };
+
+// exports.booking = async (req, res, next) =>
+// {
+//     try
+//     {
+//         const clientId = req.userId;
+//         const eventId = req.body.eventId;
+
+//         const bookedEvent = await bookEvent(clientId, eventId);
+
+//         res.status(201).json({
+//             message: 'Event booked successfully!',
+//             event: bookedEvent,
+//         });
+//     } catch (err)
+//     {
+//         if (!err.statusCode)
+//         {
+//             err.statusCode = 500;
+//         }
+//         next(err);
+//     }
+// };
+
+
+
+// exports.search_by_city = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     const city = req.body.city;
+
+
+//     Event.find({ status: 'accepted', city: city })
+//         .then(events =>
+//         {
+//             res.status(200).json({ message: 'Fetched events successfully.', events: events });//totalItems: totalItems
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+// exports.search_by_owner = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     const username = req.body.username;
+
+//     Owner.findOne({ username: username }).then(owner =>
+//     {
+//         if (!owner)
+//         {
+//             const error = new Error('owner not found');
+//             error.statusCode = 422;
+//             throw error;
+//         }
+//         // console.log(owner);
+//         return Event.find({ creator: owner._id, status: 'accepted' })
+//     })
+//         .then(events =>
+//         {
+//             res.status(200).json({ message: 'Fetched events successfully.', events: events });//totalItems: totalItems
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
+
+
+// exports.search_by_date = (req, res, next) =>
+// {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty())
+//     {
+//         const error = new Error('Validation failed....');
+//         error.statusCode = 422;
+//         throw error;
+//     }
+//     const date = req.body.date;
+
+
+//     Event.find({ status: 'accepted', date: date })
+//         .then(events =>
+//         {
+//             res.status(200).json({ message: 'Fetched events successfully.', events: events });//totalItems: totalItems
+//         })
+//         .catch(err =>
+//         {
+//             if (!err.statusCode)
+//             {
+//                 err.statusCode = 500;
+//             }
+//             next(err);
+//         });
+// };
